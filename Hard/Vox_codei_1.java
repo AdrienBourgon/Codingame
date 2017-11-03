@@ -116,11 +116,11 @@ class Grid
                 //If it's the end of the game
                 if (NewRounds == 0)
                 {
-                    //Try to replace the first bomb with an obstacle and restart the simulation
+                    //Try to replace the first bomb with a timer and restart the simulation
                     Scanner Sc = new Scanner(NewMoves.element());
                     int Y = Sc.nextInt(), X = Sc.nextInt();
                     char[][] DuplicateMap2 = Copy();
-                    DuplicateMap2[X][Y] = '#';
+                    DuplicateMap2[X][Y] = '3';
                     Simulate(DuplicateMap2, Rounds, Bombs);
                     return;
                 }
